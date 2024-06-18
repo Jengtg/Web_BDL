@@ -59,6 +59,10 @@ Route::middleware(['auth', 'cekRole:2'])->group(function () {
     Route::patch('company/apply/edit/{id}', [ApplicationController::class, 'update'])->name('apl-update');
     Route::get('/company/apply/edit/{id}', [ApplicationController::class, 'edit'])->name('apl-edit');
     Route::get('/company/apply/delete/{id}', [ApplicationController::class, 'destroy'])->name('apl-delete');
+
+    // Approve and deny Application
+    Route::get('/approve_apply/{id}', [ApplicationController::class, 'approve_apply']);
+    Route::get('/deny_apply/{id}', [ApplicationController::class, 'deny_apply']);
 });
 
 // Job Seeker

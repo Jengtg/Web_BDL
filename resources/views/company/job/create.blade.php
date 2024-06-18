@@ -39,10 +39,10 @@
                                 <input type="text" class="form-control" 
                                        name="companyName" value="{{ $user->name }}" readonly>
                             </div>
-                            {{-- <div class="form-group">
+                            <div class="form-group">
                                 <input type="hidden" class="form-control" 
                                        name="companyName" value="{{ $user->id }}" >
-                            </div> --}}
+                            </div>
                             {{-- <div class="form-group">
                                 <label>Job ID</label>
                                 <input type="text" class="form-control" 
@@ -58,13 +58,13 @@
                             <div class="form-group">
                                 <label>Requirement</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: Tes" name="requirements" required autofocus
+                                       placeholder="Contoh: Bisa menggunakan bahasa pemrograman Java" name="requirements" required autofocus
                                        >
                             </div>
                             <div class="form-group">
                                 <label>Salary</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: 200000000" name="salary" required autofocus
+                                       placeholder="Contoh: Rp10.000.000 - Rp30.000.000" name="salary" required autofocus
                                        >
                             </div>
                             <div class="form-group">

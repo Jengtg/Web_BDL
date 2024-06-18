@@ -17,6 +17,29 @@ class ApplicationController extends Controller
         return view('company.apply.index',compact('apl'));
     }
 
+    public function approve_apply($id)
+    {
+        $data = Apply::find($id);
+
+        $data->status='Approved';
+
+        $data->save();
+
+        return redirect()->back();
+    }
+
+    public function deny_apply($id)
+    {
+        $data = Apply::find($id);
+
+        $data->status='Denied';
+
+        $data->save();
+
+        return redirect()->back();
+    }
+
+
     /**
      * Show the form for creating a new resource.
      */

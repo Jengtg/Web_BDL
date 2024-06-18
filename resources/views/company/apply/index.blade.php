@@ -45,6 +45,7 @@
                                 <th>Email</th>
                                 <th>No HP</th>
                                 <th>CV</th>
+                                <th>Approval</th>
                                 <th>Status</th>
                               
                             </tr>
@@ -60,6 +61,10 @@
                             <td>{{ $apply->noHp }}</td>
                             <td>{{ $apply->cv }}</td>
                             <td>{{ $apply->status }}</td>
+                            <td>
+                                <a href="{{url('approve_apply',$apply->id)}}" class="btn btn-success">Approve</a>
+                                <a href="{{url('deny_apply',$apply->id)}}" class="btn btn-danger">Deny</a>
+                            </td>
                      
                            {{-- <td>
                                 <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> 

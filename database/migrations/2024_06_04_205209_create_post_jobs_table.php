@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('post_jobs', function (Blueprint $table) {
@@ -18,12 +21,15 @@ return new class extends Migration
             $table->date('dateopened');
             $table->date('dateexpired');
             $table->string('status')->default('pending');
-            $table->unsignedBigInteger('user_id'); // Add this line
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Add this line
             $table->timestamps();
+        
+
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::dropIfExists('post_jobs');

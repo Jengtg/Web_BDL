@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class PostJob extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'idJob',
         'companyName',
@@ -17,10 +16,8 @@ class PostJob extends Model
         'salary',
         'dateopened',
         'dateexpired',
-        'status',
-        'user_id', // Add this line
+        'status'
     ];
-
     public static function boot()
     {
         parent::boot();
@@ -32,8 +29,4 @@ class PostJob extends Model
         });
     }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }
