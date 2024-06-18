@@ -41,7 +41,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="hidden" class="form-control" 
-                                       name="companyName" value="{{ $user->id }}" >
+                                       name="" value="{{ $user->id }}" >
                             </div>
                             {{-- <div class="form-group">
                                 <label>Job ID</label>
