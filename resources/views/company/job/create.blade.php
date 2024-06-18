@@ -40,6 +40,10 @@
                                        name="companyName" value="{{ $user->name }}" readonly>
                             </div>
                             {{-- <div class="form-group">
+                                <input type="hidden" class="form-control" 
+                                       name="companyName" value="{{ $user->id }}" >
+                            </div> --}}
+                            {{-- <div class="form-group">
                                 <label>Job ID</label>
                                 <input type="text" class="form-control" 
                                        placeholder="Contoh: IJ122" name="idJob" required autofocus
